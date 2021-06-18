@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+html,
+body {
+  font-size: 14px;
+}
+.range-picker-container {
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.range-picker {
+  position: relative;
+  border: 1px solid #dee2e6;
+  color: #000;
+  min-width: 11.7rem;
+  width: 200px;
+  display: flex;
+  padding: 0.625rem 1rem;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  border-radius: 2px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.from-picker,
+.to-picker {
+  position: relative;
+  width: 70px;
+}
+
+.from-picker {
+  margin-right: 0.1rem;
+}
+
+.to-picker {
+  margin-left: 0.3rem;
+}
+
+.from,
+.to {
+  position: relative;
+  top: 0;
+  width: 67px;
+  letter-spacing: 0.55px;
+}
+
+input[type='date'] {
+  font-size: 0.75rem;
+  position: absolute;
+  cursor: pointer;
+  box-sizing: border-box;
+  line-height: normal !important;
+  height: 12px;
+  opacity: 0;
+  border: none;
+  z-index: 4;
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 67px;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+input[type='date']:focus {
+  opacity: 1;
+  outline: #d6d8db solid 1px;
+  background-color: transparent;
+}
+
+input[type='date']:focus + div {
+  background-color: hsla(210, 14%, 89%, 0.6);
+}
+
+.range-picker:focus-within {
+  outline: 1px #015fcc solid;
+}
+
+input[type='date']::-webkit-datetime-edit-fields-wrapper {
+  display: none;
+}
+
+.type-date input[type='date'] {
+  opacity: 1;
+}
+.type-date input[type='date']::-webkit-datetime-edit-fields-wrapper {
+  display: block;
+}
+
+.type-date input[type='date']::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.type-date input[type='date']::-webkit-calendar-picker-indicator {
+  position: unset;
+  right: unset;
+  width: unset;
+  height: unset;
+  margin: unset;
+  padding: unset;
+  opacity: unset;
+  cursor: unset;
+}
+
+.type-date .from {
+  display: none;
+}
+
+.date-range-error {
+  position: absolute;
+  font-size: 0.75rem;
+  color: tomato;
+}
+
+.range-error {
+  border: tomato 2px solid;
+}
